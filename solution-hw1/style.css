@@ -2,24 +2,80 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    box-sizing: border-box;
+    width: 400px;
+    height: 400px;
   }
 
+#logo-img {
+    width: 400px;
+  }
 
-#product {
-    width: 100%;
+#prod-det-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 600px;
+  }
 
-}
-#product:hover {
-    background-color: yellow;
-	
+#cart-img {
+    width: 200px;
+    height: 200px;
 }
 
 #product {
     display: block;
-    box-sizing: border-box;
-    padding: 10px;
+    padding-top: 10px;
+    margin: 0 auto;
+    width: 450px;
+    text-align: center;
    
+}
+#prod-detail {
+    text-align: center;
+}
+#prod-gallery {
+    text-align: center;
+}
+#add-cart {
+    text-align: center;
+}
+#cart-button{
+    margin-left: 20px;
+}
+
+#nav {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+   
+}
+
+#product:hover {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+#nav:hover {
+    background-color: yellow;
+	
+}
+
+.large-head {
+    font-size: xx-large;
+    text-align: center;
+}
+
+select.dropdown {
+    padding-right: 55px;
+}
+select#drop2 {
+    padding-right: 147px;
+}
+
+.drop-text {
+    margin-bottom: 5px;
 }
 
 a {
@@ -27,12 +83,74 @@ a {
     text-decoration: none;
 }
 
-p {
-    text-align: center;
+
+#customize {
+    display: block;
+    align-items: center;
+    text-align:left;
+    margin: 0 auto;
+    overflow: visible;
+    width: 13%;
+}
+#customize option{
+    width: 300px;
+}
+
+.dropdown {
+    padding: 5px;
 }
 
 hr {
     height: 1px;
     color: #333;
     background-color: #333;
+}
+
+#cart-line {
+    width: 50%;
+}
+
+button {
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    
+}
+
+button:hover {
+    background-color: yellow;
+}
+
+.cart-prod {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0px;
+}
+
+.cart-img {
+    width: 200px;
+    height: 200px;
+}
+
+#checkout {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#remove-item {
+    font-size: x-small;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.cart-text {
+    margin: 0;
+    font-size: small;
+}
+
+#checkout-text {
+    text-align: center;
+    margin: 10px;
 }

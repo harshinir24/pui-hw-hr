@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+
+  <head> 
+    <img id = "logo-img" src="/assets/logo/logo-01.svg" alt="Cinnamon roll logo for Bun-Bun Bake shop"/>
+    <link rel="stylesheet" type="text/css" href="style.css" > 
+  </head>
+
+  <body>
+    <div>
+        <hr>
+        <div id= "nav" href="index.html"> <p><a href="#products">PRODUCTS</a></p> </div>
+        <div id= "nav" href="cart.html"> <p><a href="#cart">CART</a></p> </div>
+        <br>
+  
+    </div>
+
+    <div id="prod-detail">
+        <p class="large-head"> Our Original Cinnamon Roll</p>
+        <img id= "prod-det-img" src="/assets/products/original-cinnamon-roll.jpg" alt="Cinnamon roll pastry with icing on top"/>
+    </div>
+
+    <div id="customize">
+        <p> Customize our delicious hand-made cinnamon roll to your liking! </p>
+        <br>
+        <div class="option-dropdown">
+            <p class="drop-text"> Glazing</p>
+            <select class="dropdown" id="drop1">
+                <option>Keep Original</option>
+                <option>Sugar Milk</option>
+                <option>Vanilla Milk</option>
+                <option>Double Chocolate</option>
+            </select>
+        </div>
+
+        <div class="option-dropdown">
+            <p class="drop-text"> Pack Size</p>
+            <select class="dropdown" id="drop2">
+                <option>1</option>
+                <option>3</option>
+                <option>6</option>
+                <option>12</option>
+            </select>
+        </div>
+    </div>
+
+    <br>
+    <div id="add-cart">
+        <p> $2.49 <button id= "cart-button" type="button">Add to Cart</button> </p> 
+
+    </div>
+    
+
+  </body>
+</html>
