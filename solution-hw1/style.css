@@ -1,7 +1,6 @@
-#prod-img {
+.prod-img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
     width: 400px;
     height: 400px;
   }
@@ -23,11 +22,12 @@
     height: 200px;
 }
 
-#product {
+.product {
     display: block;
-    padding-top: 10px;
+    padding: 5px;
+    padding-bottom: 0px;
     margin: 0 auto;
-    width: 450px;
+    width: 400px;
     text-align: center;
    
 }
@@ -38,26 +38,32 @@
     text-align: center;
 }
 #add-cart {
-    text-align: center;
+    text-align: left;
+    font-weight: bold;
+    width: 195px;
 }
 #cart-button{
+    display: inline-block;
+    text-align: center;
     margin-left: 20px;
+    margin-right: 18px;
+    
 }
 
-#nav {
-    width: 100px;
+.nav {
+    width: fit-content;
     display: block;
     margin: 0 auto;
     text-align: center;
    
 }
 
-#product:hover {
+.product:hover {
     background-color: yellow;
     font-weight: bold;
 }
 
-#nav:hover {
+.nav:hover {
     background-color: yellow;
 	
 }
@@ -153,4 +159,8 @@ button:hover {
 #checkout-text {
     text-align: center;
     margin: 10px;
+}
+
+.gallery-text {
+    text-align: left;
 }
