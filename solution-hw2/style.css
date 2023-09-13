@@ -1,0 +1,177 @@
+/* Some of the style syntax for text transformations, dropdowns, and aligning content 
+was retrieved from w3schools, mozilla developer guide, and stack overflow */
+
+/* Styling Images */
+.prod-img {
+    display: block;
+    margin: 0;
+    width: 400px;
+    height: 400px;
+  }
+
+#logo-img {
+    width: 400px;
+  }
+
+#prod-det-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 600px;
+  }
+
+.cart-img {
+    width: 200px;
+    height: 200px;
+}
+
+/* Styling Navigation */
+
+.nav {
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+   
+}
+
+/* Styling Divs/Containers across pages */
+
+.product {
+    display: block;
+    padding: 5px;
+    padding-bottom: 0px;
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+   
+}
+
+#customize {
+    display: block;
+    align-items: center;
+    text-align:left;
+    margin: 0 auto;
+    overflow: visible;
+    width: 13%;
+}
+
+.cart-prod {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0px;
+}
+
+/* Styling text across pages */
+
+.large-head {
+    font-size: xx-large;
+    text-align: center;
+}
+.product:hover, .nav:hover {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+#prod-detail, #prod-gallery {
+    text-align: center;
+}
+
+#add-cart {
+    text-align: left;
+    font-weight: bold;
+    width: 195px;
+}
+
+.drop-text {
+    margin-bottom: 5px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+#checkout {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#remove-item {
+    font-size: x-small;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.cart-text {
+    margin: 0;
+    font-size: small;
+}
+
+#checkout-text {
+    text-align: center;
+    margin: 10px;
+}
+
+.gallery-text {
+    text-align: left;
+}
+.roll-name {
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+.price {
+    margin-top: 0;
+}
+
+/* Styling dropdowns */
+
+select.dropdown {
+    padding-right: 55px;
+}
+select#drop2 {
+    padding-right: 147px;
+}
+
+#customize option{
+    width: 300px;
+}
+
+.dropdown {
+    padding: 5px;
+}
+
+/* Styling lines and buttons */
+
+hr {
+    height: 1px;
+    color: #333;
+    background-color: #333;
+}
+
+#cart-line {
+    width: 50%;
+}
+
+
+button {
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    
+}
+
+button:hover {
+    background-color: yellow;
+}
+
+#cart-button{
+    display: inline-block;
+    text-align: center;
+    margin-left: 21px;
+    margin-right: 22px;
+    
+}
