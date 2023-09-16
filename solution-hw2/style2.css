@@ -7,6 +7,7 @@ was retrieved from w3schools, mozilla developer guide, and stack overflow */
     margin: 0;
     width: 400px;
     height: 400px;
+    border: solid black;
   }
 
 #logo-img {
@@ -30,22 +31,65 @@ was retrieved from w3schools, mozilla developer guide, and stack overflow */
 
 .nav {
     width: fit-content;
-    display: block;
-    margin: 0 auto;
     text-align: center;
+    font-size: x-large;
+    height: fit-content;
    
 }
 
 /* Styling Divs/Containers across pages */
 
+#prod-gallery {
+    display: flex;
+    flex-direction: row; /* default */
+    justify-content: center; /* where on the axis it goes. Can put space-between, space-around, space-evenly, divides space equally between elements */
+    /* how it's arranged vertically, for vertical axis go to the end */
+    align-items: flex-start;
+     /* tells it to come down */
+    flex-flow: row wrap;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    
+}
+#nav-chunk {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    
+}
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 50px;
+    
+
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    width: 100%;
+}
+#title-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+
 .product {
     display: block;
     padding: 5px;
     padding-bottom: 0px;
-    margin: 0 auto;
     width: 400px;
-    text-align: center;
-   
+    height: auto;
+    margin: 0;
+    text-align: center; 
 }
 
 #customize {
@@ -149,6 +193,7 @@ hr {
     height: 1px;
     color: #333;
     background-color: #333;
+    width: 300%;
 }
 
 #cart-line {
