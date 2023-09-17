@@ -6,57 +6,99 @@
   <!-- Header with baking shop icon and style sheet linked-->
 
   <head> 
-    <a href="./index.html"><img id = "logo-img" src="../assets/logo/logo-01.svg" alt="Cinnamon roll logo for Bun-Bun Bake shop" width="400" /></a>
-    <link rel="stylesheet" type="text/css" href="./style2.css" > 
+    <link rel="stylesheet" type="text/css" href="./style2.css" >
+
+    <div id="header">
+      <div class="page-head">
+        <a href="./index.html"><img id = "logo-img" src="../assets/logo/logo-01.svg" alt="Cinnamon roll logo for Bun-Bun Bake shop" width="400"/></a>
+        <div>
+          <div id="header-line"><hr></div>
+          <p class="large-head">Shopping Cart</p>
+        </div>
+      </div>
+      
+      <div id="nav-bar">
+
+            <!-- Navigation Menu -->
+        <div class= "nav"> <p><a href="./index.html">PRODUCTS</a></p> </div>
+        <div class= "nav"> <p><a href="./cart2.html">CART</a></p> </div>
+            
+      </div>
+
+    </div>
+
   </head>
 
   <body>
 
     <!-- Navigation Menu -->
 
-    <div>
-        <hr>
-        <div class= "nav"> <p><a href="./index.html">PRODUCTS</a></p> </div>
-        <div class= "nav"> <p><a href="./cart2.html">CART</a></p> </div>
-        <br>
-  
-    </div>
-
-    <p class="large-head">Shopping Cart</p>
-
     <!-- Shopping cart, with each image, cinnamon roll name, glazing option, pack size option, and price grouped as a "Card" -->
 
-    <div class="cart-prod">
-      <img class= "cart-img" src="../assets/products/original-cinnamon-roll.jpg" alt="Cinnamon roll pastry with icing on top" width="200"/>
-      <p id="remove-item"> Remove</p>
-      <div class = "cart-content">
-        <p class="cart-text"> Original Cinnamon Roll</p>
-        <p class="cart-text"> Glazing: Keep original</p>
-        <p class="cart-text"> Pack size: 1</p>
+    <div id="cart-checkout">
+
+      <div class="cart-prod">
+
+        <div class="cart-img-text">
+
+          <div class="cart-img-remove">
+            <img class= "cart-img" src="../assets/products/original-cinnamon-roll.jpg" alt="Cinnamon roll pastry with icing on top" width="200"/>
+            <p id="remove-item"> Remove</p>
+          </div>
+
+          <div class = "cart-content">
+            <p class="cart-text"> Original Cinnamon Roll</p>
+            <p class="cart-text"> Glazing: Keep original</p>
+            <p class="cart-text"> Pack size: 1</p>
+          </div>
+
+        </div>
+
+        <div class="cart-text cart-price"><p> $2.49 </p></div>
+
       </div>
-      <p> $2.49 </p>
-    </div>
 
-    <br>
+      <br>
 
-    <div class="cart-prod">
-      <img class= "cart-img" src="../assets/products/double-chocolate-cinnamon-roll.jpg" alt="Double Chocolate Cinnamon roll pastry with icing on top" width="200"/>
-      <p id="remove-item"> Remove</p>
-      <div class = "cart-content">
-        <p class="cart-text"> Double Chocolate Cinnamon Roll</p>
-        <p class="cart-text"> Glazing: Sugar Milk</p>
-        <p class="cart-text"> Pack size: 6</p>
+      <div class="cart-prod">
+
+        <div class="cart-img-text">
+
+          <div class="cart-img-remove">
+            <img class= "cart-img" src="../assets/products/double-chocolate-cinnamon-roll.jpg" alt="Double Chocolate Cinnamon roll pastry with icing on top" width="200"/>
+            <p id="remove-item"> Remove</p>
+          </div>
+
+          <div class = "cart-content">
+            <p class="cart-text"> Double Chocolate Cinnamon Roll</p>
+            <p class="cart-text"> Glazing: Sugar Milk</p>
+            <p class="cart-text"> Pack size: 6</p>
+          </div>
+
+        </div>
+
+        <div class="cart-text cart-price"> <p> $27.45 </p> </div>
+
       </div>
-      <p> $27.45 </p>
-    </div>
 
-    <hr id="cart-line">
+      
 
-    <!-- Checkout section with price and checkout button -->
+      <!-- Checkout section with price and checkout button -->
+      <div id="cart-line"><hr></div>
 
-    <div id="checkout">
-      <p id="checkout-text">Total: $29.94</p>
-      <button type="button">Checkout</button>
+      <div id="checkout">
+       
+        <div id="checkout-text">
+          <div id="txt-total"><p>Total</p></div>
+          <div id="txt-total-price"><p> $29.94</p></div>
+        </div>
+        
+      </div>
+      <div><button type="button" id="checkout-button">Checkout</button></div>
+      
+      
+      
+
     </div>
 
   </body>

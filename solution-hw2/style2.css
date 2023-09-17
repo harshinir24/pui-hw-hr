@@ -14,6 +14,10 @@ was retrieved from w3schools, mozilla developer guide, and stack overflow */
     width: 400px;
   }
 
+#header-line {
+    width: 300%;
+}
+
 #prod-det-img {
     display: block;
     margin-left: auto;
@@ -31,10 +35,10 @@ was retrieved from w3schools, mozilla developer guide, and stack overflow */
 
 .nav {
     width: fit-content;
-    text-align: center;
-    font-size: x-large;
     height: fit-content;
-   
+    font-size: x-large;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* Styling Divs/Containers across pages */
@@ -44,26 +48,19 @@ was retrieved from w3schools, mozilla developer guide, and stack overflow */
     flex-direction: row; /* default */
     justify-content: center; /* where on the axis it goes. Can put space-between, space-around, space-evenly, divides space equally between elements */
     /* how it's arranged vertically, for vertical axis go to the end */
-    align-items: flex-start;
+    align-items: start;
      /* tells it to come down */
-    flex-flow: row wrap;
-    gap: 20px;
-    width: 100%;
-    height: auto;
-    
-}
-#nav-chunk {
-    display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    align-self: flex-start;
+    column-gap: 30px;
     
 }
+
 #nav-bar {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 50px;
+    height: 5%;
     
 
 }
@@ -72,13 +69,20 @@ was retrieved from w3schools, mozilla developer guide, and stack overflow */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    flex-flow: row wrap;
+    column-gap: 300px;
     width: 100%;
 }
-#title-line {
+
+.page-head {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
+    column-gap: 20px;
+    align-items: end;
+}
+
+#title-line {
+    width: 100%;
     
 }
 
@@ -89,23 +93,78 @@ was retrieved from w3schools, mozilla developer guide, and stack overflow */
     width: 400px;
     height: auto;
     margin: 0;
-    text-align: center; 
 }
 
 #customize {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    text-align:left;
-    margin: 0 auto;
-    overflow: visible;
-    width: 13%;
+    width: 100%;
+    
+}
+
+#customize-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 19%;
+    margin: 40px;
+    row-gap: 80px;
+    
+}
+
+#add-cart-button {
+    width: 180px;
+    font-size: large;
+}
+.big-text {
+    font-size: x-large;
 }
 
 .cart-prod {
-    display: block;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 70%;
+    
+}
+.cart-img-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+#cart-checkout {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: end;
+    height: auto;
+    width: 100%;
     margin: 0;
-    padding: 0px;
+}
+
+#checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+} 
+
+#checkout-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 100px;
 }
 
 /* Styling text across pages */
@@ -124,9 +183,13 @@ was retrieved from w3schools, mozilla developer guide, and stack overflow */
 }
 
 #add-cart {
-    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
     font-weight: bold;
-    width: 195px;
+    width: 100%;
+    column-gap: 40px;
 }
 
 .drop-text {
@@ -138,8 +201,10 @@ a {
     text-decoration: none;
 }
 #checkout {
-    margin: 0 auto;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 20px;
 }
 
 #remove-item {
@@ -150,13 +215,16 @@ a {
 
 .cart-text {
     margin: 0;
-    font-size: small;
+    font-size: x-large;
 }
 
-#checkout-text {
-    text-align: center;
-    margin: 10px;
+.cart-price {
+    align-self: center;
+    justify-content: end;
+    margin-right: 50px;
 }
+
+
 
 .gallery-text {
     text-align: left;
@@ -173,10 +241,10 @@ a {
 /* Styling dropdowns */
 
 select.dropdown {
-    padding-right: 55px;
+    padding-right: 60px;
 }
 select#drop2 {
-    padding-right: 147px;
+    padding-right: 225px;
 }
 
 #customize option{
@@ -193,11 +261,22 @@ hr {
     height: 1px;
     color: #333;
     background-color: #333;
-    width: 300%;
+    width: 100%;
 }
 
 #cart-line {
-    width: 50%;
+    width: 70%;
+}
+
+#txt-total{
+    margin-right: 375px;
+}
+#txt-total-price {
+    margin-right: 25px;
+}
+
+#checkout-button {
+    margin-right: 45px;
 }
 
 
@@ -213,10 +292,3 @@ button:hover {
     background-color: yellow;
 }
 
-#cart-button{
-    display: inline-block;
-    text-align: center;
-    margin-left: 21px;
-    margin-right: 22px;
-    
-}
