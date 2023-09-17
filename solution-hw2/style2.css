@@ -14,8 +14,8 @@ was retrieved from w3schools, mozilla developer guide, and stack overflow */
     width: 400px;
   }
 
-#header-line {
-    width: 300%;
+.header-line {
+    width: 580%;
 }
 
 #prod-det-img {
@@ -59,9 +59,7 @@ was retrieved from w3schools, mozilla developer guide, and stack overflow */
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 50px;
-    height: 5%;
-    
+    column-gap: 50px;
 
 }
 
