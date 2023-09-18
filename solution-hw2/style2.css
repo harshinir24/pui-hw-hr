@@ -140,6 +140,7 @@ https://www.w3schools.com/css/css3_fonts.asp
     align-items: center;
     gap: 20px;
     width: 70%;
+    margin-left: 420px;
     
 }
 .cart-img-text{
@@ -297,7 +298,7 @@ select#drop2 {
 }
 
 .header-line {
-    width: 520%;
+    width: 560%;
 }
 
 #gallery-header-line{
