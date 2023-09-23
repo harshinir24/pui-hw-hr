@@ -49,21 +49,24 @@
             <div>
                 <div class="option-dropdown">
                     <p class="drop-text big-text"> Glazing</p>
-                    <select class="dropdown big-text" id="drop1">
-                        <option>Keep Original</option>
+                    <select class="dropdown big-text" id="dropdown1" onchange="changePrice(this)">
+                        <!-- <option>Keep Original</option>
                         <option>Sugar Milk</option>
                         <option>Vanilla Milk</option>
                         <option>Double Chocolate</option>
+                        -->
                     </select>
                 </div>
 
                 <div class="option-dropdown">
                     <p class="drop-text big-text"> Pack Size</p>
-                    <select class="dropdown big-text" id="drop2">
-                        <option>1</option>
+                    <select class="dropdown big-text" id="dropdown2" onchange="changePrice(this)">
+                      <!--
+                      <option>1</option>
                         <option>3</option>
                         <option>6</option>
                         <option>12</option>
+                      -->
                     </select>
                 </div>
             </div>
@@ -71,7 +74,7 @@
 
             <!-- Add to Cart section, with price and Add to Cart button-->
             <div id="add-cart">
-                <div><p class= "big-text"> $2.49 </p> </div>
+                <div><p class= "big-text" id="prod-detail-price"> $2.49 </p> </div>
                 <div><button type="button" id="add-cart-button">Add to Cart</button> </div>
 
             </div>
@@ -79,6 +82,6 @@
 
     </div>
     
-
+    <script src="update.js"></script>
   </body>
 </html>
