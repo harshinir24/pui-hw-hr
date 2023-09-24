@@ -1,5 +1,7 @@
 //Help:
 // https://www.w3schools.com/jsref/met_select_add.asp
+//https://stackoverflow.com/questions/6134039/format-number-to-always-show-2-decimal-places
+
 
 const glazingOptions = [
     {
@@ -36,7 +38,7 @@ const packSizeOptions = [
     },
     {
         packSize: 12,
-        price: 10
+        multiply: 10
     }
 ]
 
@@ -58,27 +60,29 @@ for (let i = 0; i < packSizeOptions.length; i++) {
 
 }
 
+
 function changePrice(dropOption) {
     let basePrice = 2.49;
-    console.log(dropOption.selectedIndex);
-    let glazingPrice = glazingOptions[dropOption.selectedIndex].price;
-    let packPrice = packSizeOptions[dropOption.selectedIndex].multiply;
     let price = 0;
+    let glazingPrice = 0;
+    let packPrice = 0;
+    //console.log(dropOption);
+
+    glazingPrice = glazingOptions[glazeSelection.selectedIndex].price;
+  
+    packPrice = packSizeOptions[packSizeSelection.selectedIndex].multiply;
 
     totalPrice = document.getElementById("prod-detail-price");
 
     price = (basePrice + glazingPrice) * packPrice;
-    totalPrice.text = price;
-    console.log(glazingPrice);
-    console.log(packPrice);
-    console.log(price);
+    price = (Math.round(price * 100) / 100).toFixed(2);
+    totalPrice.textContent = "$" + price;
+    //console.log(glazingPrice);
+    //console.log(packPrice);
+    //console.log(price);
+    //console.log(totalPrice);
 
 }
-
-glazeSelection.addEventListener('select', changePrice);
-packSizeSelection.addEventListener('select', changePrice);
-
-
 
 
 
