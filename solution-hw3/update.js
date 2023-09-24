@@ -1,8 +1,11 @@
-//Help:
+// Sources:
 // https://www.w3schools.com/jsref/met_select_add.asp
-//https://stackoverflow.com/questions/6134039/format-number-to-always-show-2-decimal-places
+// https://stackoverflow.com/questions/6134039/format-number-to-always-show-2-decimal-places
+// https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
+// https://www.w3schools.com/jsref/prop_select_selectedindex.asp
 
 
+//Create objects for dropdown menus with corresponding price adaptations
 const glazingOptions = [
     {
         glaze: "Keep Original",
@@ -42,17 +45,18 @@ const packSizeOptions = [
     }
 ]
 
+//Grabbing dropdown menus from the DOM
 let glazeSelection = document.getElementById("dropdown1");
 let packSizeSelection = document.getElementById("dropdown2");
 
-//Create glazing options
+//Populate glazing options in dropdown menu
 for (let i = 0; i < glazingOptions.length; i++) {
     let option = document.createElement("option");
     option.text = glazingOptions[i].glaze;
     glazeSelection.appendChild(option);
 
 }
-//Create pack size options
+//Populate pack size options in dropdown menu
 for (let i = 0; i < packSizeOptions.length; i++) {
     let option = document.createElement("option");
     option.text = packSizeOptions[i].packSize;
@@ -60,27 +64,28 @@ for (let i = 0; i < packSizeOptions.length; i++) {
 
 }
 
-
+//Change price based on selected options in dropdown menus 
 function changePrice(dropOption) {
     let basePrice = 2.49;
     let price = 0;
     let glazingPrice = 0;
     let packPrice = 0;
-    //console.log(dropOption);
 
+    //Grab corresponding price adaption from list of objects for glazing options
     glazingPrice = glazingOptions[glazeSelection.selectedIndex].price;
-  
+
+    //Grab corresponding price adaption from list of objects for pack size options
     packPrice = packSizeOptions[packSizeSelection.selectedIndex].multiply;
 
+    //Grab total price text element from DOM of product detail page
     totalPrice = document.getElementById("prod-detail-price");
 
+    //Calculate total price based on user selections
     price = (basePrice + glazingPrice) * packPrice;
     price = (Math.round(price * 100) / 100).toFixed(2);
+
+    //Change content of total price text 
     totalPrice.textContent = "$" + price;
-    //console.log(glazingPrice);
-    //console.log(packPrice);
-    //console.log(price);
-    //console.log(totalPrice);
 
 }
 
