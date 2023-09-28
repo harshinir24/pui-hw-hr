@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+
+  <!-- Header with baking shop icon and style sheet linked-->
+
+  <head> 
+    <div class="header">
+      <div class="page-head">
+        <a href="./index.html"><img id = "logo-img" src="../assets/logo/logo-01.svg" alt="Cinnamon roll logo for Bun-Bun Bake shop" width="400"/></a>
+        <div class="head-middle">
+          <div class="header-line" id="prod-detail-line"><hr></div>
+          <p class="large-head"> Original cinnamon roll</p>
+        </div>
+      </div>
+      <link rel="stylesheet" type="text/css" href="./style4.css" >
+
+      
+      <div class ="nav-bar" id="nav-bar-products">
+
+          <!-- Navigation Menu -->
+          <div class= "nav"> <p><a href="./index.html"><span id="nav-products">PRODUCTS</span></a></p> </div>
+          <div class= "nav"> <p><a href="./cart4.html">CART</a></p> </div>
+          
+      </div>
+      
+    </div>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation Menu -->
+    
+
+    <!-- Product Detail section, with image and cinnamon roll name grouped as a "Card" -->
+
+
+    <!-- Dropdowns with different options listed for Glazing and Pack Size -->
+
+    <div id="customize">
+        <div>
+            <div id="prod-img-container">
+              <img id= "prod-det-img" src="../assets/products/original-cinnamon-roll.jpg" alt="Cinnamon roll pastry with icing on top" width="600"/>
+            </div>
+        </div>
+        <div id="customize-col">
+            <div><p class="big-text"> Customize our delicious hand-made cinnamon roll to your liking! </p></div>
+
+            <div>
+                <div class="option-dropdown">
+                    <p class="drop-text big-text"> Glazing</p>
+                    <select class="dropdown big-text" id="dropdown1" onchange="changePrice(this)">
+                        <!-- <option>Keep Original</option>
+                        <option>Sugar Milk</option>
+                        <option>Vanilla Milk</option>
+                        <option>Double Chocolate</option>
+                        -->
+                    </select>
+                </div>
+
+                <div class="option-dropdown">
+                    <p class="drop-text big-text"> Pack Size</p>
+                    <select class="dropdown big-text" id="dropdown2" onchange="changePrice(this)">
+                      <!--
+                      <option>1</option>
+                        <option>3</option>
+                        <option>6</option>
+                        <option>12</option>
+                      -->
+                    </select>
+                </div>
+            </div>
+            
+
+            <!-- Add to Cart section, with price and Add to Cart button-->
+            <div id="add-cart">
+                <div><p class= "big-text" id="prod-detail-price"> $2.49 </p> </div>
+                <div><button type="button" id="add-cart-button">Add to Cart</button> </div>
+
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="update4.js"></script>
+  </body>
+</html>
