@@ -78,11 +78,25 @@ const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const rollType = params.get("roll");
 
+const rollHeader = document.getElementById("title-roll-name");
+const rollImage = document.getElementById("prod-det-img");
+const rollBasePrice = document.getElementById("prod-detail-price");
+
 console.log(queryString);
 console.log(params);
 console.log(rollType);
+console.log(rollImage.src);
 
+for (const element in rolls) {
+    if (element === rollType) {
+        let newHead = rollType + " " + "cinnamon roll";
+        rollHeader.innerHTML = "<p class='large-head'>" + newHead + "<p>";
+        rollImage.src = "../assets/products/" + rolls[element]["imageFile"];
+        rollBasePrice.innerHTML = "$" + rolls[element]["basePrice"];
+        console.log(rolls[element]);
+    }
 
+}
 
 
 
@@ -109,8 +123,8 @@ for (let i = 0; i < packSizeOptions.length; i++) {
 }
 
 //Change price based on selected options in dropdown menus 
-function changePrice(dropOption) {
-    let basePrice = 2.49;
+function changePrice() {
+    let basePrice = rolls[rollType]["basePrice"];
     let price = 0;
     let glazingPrice = 0;
     let packPrice = 0;
@@ -131,6 +145,22 @@ function changePrice(dropOption) {
     //Change content of total price text 
     totalPrice.textContent = "$" + price;
 
+}
+
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+    }
+}
+
+
+function addToCart () {
+    let newRoll = new Roll(rollType, glazeSelection.value, packSizeSelection.value, rolls[rollType]["basePrice"]);
+    cart.push(newRoll);
+    console.log(cart);
 }
 
 
