@@ -3,6 +3,8 @@
 // https://stackoverflow.com/questions/6134039/format-number-to-always-show-2-decimal-places
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
 // https://www.w3schools.com/jsref/prop_select_selectedindex.asp
+// https://www.w3schools.com/jsref/jsref_push.asp
+
 
 
 //Create objects for dropdown menus with corresponding price adaptations
@@ -21,7 +23,7 @@ const glazingOptions = [
         price: 0.50
     },
     {
-        glaze: "Double Chocolate",
+        glaze: "Double-Chocolate",
         price: 1.50
     }
 ]
@@ -45,24 +47,29 @@ const packSizeOptions = [
     }
 ]
 
+//Creating empty cart array
 const cart = [];
 
+//Parsing the url parameter and storing the current roll type as a variable 
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const rollType = params.get("roll");
 
+//Grabbing product detail elements that will differ for specific rolls 
 const rollHeader = document.getElementById("title-roll-name");
 const rollImage = document.getElementById("prod-det-img");
 const rollBasePrice = document.getElementById("prod-detail-price");
 
-console.log(queryString);
-console.log(params);
-console.log(rollType);
-console.log(rollImage.src);
+//console.log(queryString);
+//console.log(params);
+//console.log(rollType);
+//console.log(rollImage.src);
 
+
+//Replacing product detail information(header, image, base price) depending on the roll that is grabbed from the url
 for (const element in rolls) {
     if (element === rollType) {
-        let newHead = rollType + " " + "cinnamon roll";
+        let newHead = rollType + " " + "Cinnamon Roll";
         rollHeader.innerHTML = "<p class='large-head'>" + newHead + "<p>";
         rollImage.src = "../assets/products/" + rolls[element]["imageFile"];
         rollBasePrice.innerHTML = "$" + rolls[element]["basePrice"];
@@ -77,7 +84,7 @@ for (const element in rolls) {
 let glazeSelection = document.getElementById("dropdown1");
 let packSizeSelection = document.getElementById("dropdown2");
 
-//Changing image in product detail
+//Grabbing image in product detail
 let prodDetailImage = document.getElementById("prod-img-container");
 
 //Populate glazing options in dropdown menu
@@ -120,6 +127,7 @@ function changePrice() {
 
 }
 
+//Class and constructor for roll objects, which will be created when the add to cart button is pressed
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice) {
         this.type = rollType;
@@ -129,7 +137,7 @@ class Roll {
     }
 }
 
-
+//Creating a new cart object and adding/pushing it to the cart array 
 function addToCart () {
     let newRoll = new Roll(rollType, glazeSelection.value, packSizeSelection.value, rolls[rollType]["basePrice"]);
     cart.push(newRoll);
