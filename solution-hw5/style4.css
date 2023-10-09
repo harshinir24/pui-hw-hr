@@ -1,0 +1,340 @@
+/* Some of the style syntax for text transformations, dropdowns, and aligning content 
+was retrieved from w3schools, mozilla developer guide, and stack overflow */
+
+/* Links
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-align-self
+https://www.w3docs.com/learn-css/align-items.html
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
+https://www.w3docs.com/snippets/css/how-to-style-a-horizontal-line.html
+https://www.w3schools.com/css/css3_fonts.asp
+*/
+
+/* Styling Images */
+.prod-img {
+    display: block;
+    margin: 0;
+    width: auto;
+    height: 285px;
+    border: 3px solid black;
+  }
+
+#logo-img {
+    width: 400px;
+  }
+
+
+.head-middle {
+    width: fit-content;
+}
+
+#prod-det-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 600px;
+    border: 3px solid black;
+  }
+
+#cart-img {
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+}
+
+/* Styling Navigation */
+
+.nav {
+    width: fit-content;
+    font-size: x-large;
+    height: fit-content;
+    
+}
+#nav-products, #nav-cart {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    margin-right: 30px;
+    margin-bottom: 90px;
+    height: 1%;
+
+}
+#nav-bar-products {
+    margin-right: 50px;
+}
+
+/* Styling Divs/Containers across pages */
+
+#prod-gallery {
+    display: flex;
+    flex-direction: row; /* default */
+    justify-content: center; /* where on the axis it goes. */
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    margin: 50px;
+    
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 60px;
+    width: 100%;
+}
+
+.page-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 20px;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+
+.product {
+    display: block;
+    padding: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    width: 290px;
+    height: auto;
+    margin: 0;
+}
+
+#customize {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    
+}
+
+#customize-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 19%;
+    margin: 40px;
+    row-gap: 80px;
+    
+}
+
+.cart-prod {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 70%;
+    margin-left: 420px;
+    
+}
+.cart-img-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+#cart-checkout {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    margin-top: 50px;
+}
+
+#checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+} 
+
+#checkout-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 55px;
+    margin-bottom: 20px;
+}
+
+/* Styling text across pages */
+
+.big-text {
+    font-size: large;
+}
+.xlarge-text {
+    font-size: x-large;
+}
+
+.large-head {
+    font-size: x-large;
+    margin-bottom: 0px;
+    padding-top: 20px
+}
+.product:hover{
+    background-color: yellow;
+    font-weight: bold;
+}
+
+#prod-detail, #prod-gallery {
+    text-align: center;
+}
+
+#add-cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+    width: 100%;
+    column-gap: 30px;
+}
+
+.drop-text {
+    margin-bottom: 5px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+#checkout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+#remove-item {
+    font-size: x-small;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.cart-text {
+    margin: 0;
+    font-size: large;
+}
+
+.cart-price {
+    align-self: center;
+    justify-content: end;
+    margin-right: 50px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gallery-text {
+    text-align: left;
+    width: 67%;
+}
+.roll-name {
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+.price {
+    margin-top: 0;
+}
+
+#txt-total{
+    margin-right: 375px;
+}
+#txt-total-price {
+    margin-right: 25px;
+}
+
+/* Styling dropdowns */
+
+select.dropdown {
+    padding-right: 60px;
+}
+select#dropdown2 {
+    padding-right: 185px;
+}
+
+#customize option{
+    width: 300px;
+}
+
+.dropdown {
+    padding: 5px;
+}
+
+/* Styling lines and buttons */
+
+#add-cart-button {
+    width: 140px;
+    font-size: large;
+    background-color: yellow;
+}
+
+#title-line {
+    width: 100%;
+}
+
+.header-line {
+    width: 560%;
+}
+
+#gallery-header-line{
+    width: 240%;
+}
+
+#prod-detail-line {
+    width: 335%;
+}
+
+hr {
+    height: 1px;
+    color: #333;
+    background-color: #333;
+    width: 100%;
+}
+
+#cart-line {
+    width: 70%;
+}
+
+#checkout-button {
+    margin-right: 45px;
+    background-color: yellow;
+}
+
+
+button {
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    
+}
+
+button:hover {
+    background-color: yellow;
+}
+

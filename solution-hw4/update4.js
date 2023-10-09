@@ -60,11 +60,6 @@ const rollHeader = document.getElementById("title-roll-name");
 const rollImage = document.getElementById("prod-det-img");
 const rollBasePrice = document.getElementById("prod-detail-price");
 
-//console.log(queryString);
-//console.log(params);
-//console.log(rollType);
-//console.log(rollImage.src);
-
 
 //Replacing product detail information(header, image, base price) depending on the roll that is grabbed from the url
 for (const element in rolls) {
