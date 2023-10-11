@@ -179,6 +179,10 @@ https://www.w3schools.com/css/css3_fonts.asp
     margin-bottom: 20px;
 }
 
+.cart-list {
+    margin-right: 250px;
+}
+
 /* Styling text across pages */
 
 .big-text {
@@ -228,9 +232,9 @@ a {
 }
 
 #remove-item {
-    font-size: x-small;
+    text-decoration: underline;
     font-weight: bold;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 .cart-text {
@@ -298,7 +302,7 @@ select#dropdown2 {
 }
 
 .header-line {
-    width: 560%;
+    width: 520%;
 }
 
 #gallery-header-line{
