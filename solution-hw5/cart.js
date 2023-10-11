@@ -1,3 +1,9 @@
+//Resources used for assignment
+// https://www.tutorialspoint.com/how-to-convert-a-string-into-integer-in-javascript#:~:text=To%20convert%20a%20string%20to,be%20returned%20as%20the%20output.
+// https://stackoverflow.com/questions/46078328/change-ids-of-child-elements-in-javascript-when-cloning-an-element
+// 
+
+
 //Create set to hold all roll objects
 const rollList = new Set();
 
