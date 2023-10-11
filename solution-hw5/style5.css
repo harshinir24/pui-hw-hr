@@ -175,6 +175,7 @@ https://www.w3schools.com/css/css3_fonts.asp
     display: flex;
     flex-direction: row;
     justify-content: end;
+    align-content: center;
     gap: 55px;
     margin-bottom: 20px;
 }
