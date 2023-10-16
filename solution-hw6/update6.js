@@ -47,9 +47,6 @@ const packSizeOptions = [
     }
 ]
 
-//Creating empty cart array
-//let cart = [];
-
 //Parsing the url parameter and storing the current roll type as a variable 
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
@@ -72,8 +69,6 @@ for (const element in rolls) {
     }
 
 }
-
-
 
 //Grabbing dropdown menus from the DOM
 let glazeSelection = document.getElementById("dropdown1");
@@ -134,25 +129,20 @@ class Roll {
 
 
 function retrieveFromLocalStorage() {
+    //Get rolls from local storage and convert them to objects
     const rollsArrayString = localStorage.getItem('storedRolls');
     const rollsArray = JSON.parse(rollsArrayString);
     return rollsArray;
-    // for (const noteData of notecardArray) {
-    //   const notecard = addNewNote(noteData.noteImageURL, noteData.noteTitle,
-    //     noteData.noteBody);
-    //   createElement(notecard);
-    // }
   }
 
   function saveToLocalStorage () {
+    //Save rolls added to cart to local storage
     const cartArrayString = JSON.stringify(cart);
-    //console.log(cartArrayString);
-
     localStorage.setItem('storedRolls', cartArrayString);
     console.log(localStorage.getItem('storedRolls'));
   }
   
-//Attempt to retrieve cart from storage, otherwise it's an empty cart 
+//Retrieve rolls from local storage if it's not empty, otherwise cart is empty
   if (localStorage.getItem('storedRolls') != null) {
     cart = Array.from(retrieveFromLocalStorage());
   } else {
@@ -160,11 +150,11 @@ function retrieveFromLocalStorage() {
   }
 
  //Creating a new cart object and adding/pushing it to the cart array 
+ //when the add to cart button is clicked
 function addToCart () {
     let newRoll = new Roll(rollType, glazeSelection.value, packSizeSelection.value, rolls[rollType]["basePrice"]);
     cart.push(newRoll);
     saveToLocalStorage();
-    //console.log(cart);
 }
 
 

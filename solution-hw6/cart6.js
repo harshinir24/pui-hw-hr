@@ -86,9 +86,6 @@ class Roll {
         
         return price;
     
-        
-        
-    
     }
 
 }
@@ -165,33 +162,34 @@ function updateRollElement(newRoll){
 
 
 
-//Update the total price
-//totalPrice();
-
 function retrieveFromLocalStorage() {
+    //Get rolls from local storage and convert them to objects
     const rollsArrayString = localStorage.getItem('storedRolls');
     const rollsArray = JSON.parse(rollsArrayString);
 
+    //Add rolls in local storage to the cart page and to the cart Set
     for (const rollData of rollsArray) {
        const roll = new Roll(rollData.type, rollData.glazing, rollData.size, rollData.basePrice);
        rollSet.add(roll);
        addItemToCart(roll);
     }
+
+    //Calculate total price of rolls on the page
     totalPrice();
     console.log(localStorage.getItem('storedRolls'));
 
   }
 
+  //Save rolls in cart to local storage
   function saveToLocalStorage () {
-    console.log(cart);
     const cartArrayString = JSON.stringify(cart);
-    console.log(cartArrayString);
     localStorage.setItem('storedRolls', cartArrayString);
+
     console.log(localStorage.getItem('storedRolls'));
   }
   
 
-
+//Update cart with rolls from local storage if there are any
   if (localStorage.getItem('storedRolls') != null) {
     retrieveFromLocalStorage();
     cart = Array.from(rollSet);
