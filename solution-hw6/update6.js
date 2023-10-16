@@ -133,27 +133,29 @@ function retrieveFromLocalStorage() {
     const rollsArrayString = localStorage.getItem('storedRolls');
     const rollsArray = JSON.parse(rollsArrayString);
     return rollsArray;
-  }
+}
 
-  function saveToLocalStorage () {
+function saveToLocalStorage () {
     //Save rolls added to cart to local storage
     const cartArrayString = JSON.stringify(cart);
     localStorage.setItem('storedRolls', cartArrayString);
     console.log(localStorage.getItem('storedRolls'));
-  }
+}
   
 //Retrieve rolls from local storage if it's not empty, otherwise cart is empty
-  if (localStorage.getItem('storedRolls') != null) {
+let cart;
+if (localStorage.getItem('storedRolls') != null) {
     cart = Array.from(retrieveFromLocalStorage());
-  } else {
+} else {
     cart = [];
-  }
+}
 
  //Creating a new cart object and adding/pushing it to the cart array 
  //when the add to cart button is clicked
 function addToCart () {
     let newRoll = new Roll(rollType, glazeSelection.value, packSizeSelection.value, rolls[rollType]["basePrice"]);
     cart.push(newRoll);
+    console.log(newRoll);
     saveToLocalStorage();
 }
 

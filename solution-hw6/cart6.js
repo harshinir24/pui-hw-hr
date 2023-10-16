@@ -178,22 +178,22 @@ function retrieveFromLocalStorage() {
     totalPrice();
     
 
-  }
+}
 
-  //Save rolls in cart to local storage
-  function saveToLocalStorage () {
+//Save rolls in cart to local storage
+function saveToLocalStorage () {
     const cartArrayString = JSON.stringify(cart);
     localStorage.setItem('storedRolls', cartArrayString);
 
     console.log(localStorage.getItem('storedRolls'));
-  }
+}
   
-
+let cart;
 //Update cart with rolls from local storage if there are any
-  if (localStorage.getItem('storedRolls') != null) {
+if (localStorage.getItem('storedRolls') != null) {
     retrieveFromLocalStorage();
     cart = Array.from(rollSet);
-  } else {
+} else {
     cart = [];
-  }
+}
 
