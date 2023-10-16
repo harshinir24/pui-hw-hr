@@ -155,7 +155,6 @@ if (localStorage.getItem('storedRolls') != null) {
 function addToCart () {
     let newRoll = new Roll(rollType, glazeSelection.value, packSizeSelection.value, rolls[rollType]["basePrice"]);
     cart.push(newRoll);
-    console.log(newRoll);
     saveToLocalStorage();
 }
 
