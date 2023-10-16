@@ -176,7 +176,7 @@ function retrieveFromLocalStorage() {
 
     //Calculate total price of rolls on the page
     totalPrice();
-    console.log(localStorage.getItem('storedRolls'));
+    
 
   }
 
