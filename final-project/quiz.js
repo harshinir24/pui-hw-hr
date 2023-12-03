@@ -27,13 +27,12 @@ $(".optionText").click(function(){
         this.style.border = "#ec8f00";
     } 
     
-
     console.log(preferences);
-    //console.log(preferences);
+    
 })
 
 $("#questionOne").click(function(){
-    //console.log(preferences);
+    
     oneSelected = true;
 })
 
@@ -43,12 +42,10 @@ $("#questionOne").click(function(){
 // })
 
 $("#questionThree").click(function(){
-    //console.log(preferences);
     threeSelected = true;
 })
 
 $("#questionFour").click(function(){
-    //console.log(preferences);
     fourSelected = true;
 })
 
@@ -63,16 +60,22 @@ $("#continueButton").click(function(){
     //     $("#questionTwo").toggle();
         $("#questionThree").toggle();
         oneSelected = false;
+        threeSelected = false;
+        fourSelected = false;
     } 
     else if (threeSelected === true) {
         $("#questionThree").toggle();
         $("#questionFour").toggle();
         threeSelected = false;
+        fourSelected = false;
     } 
 
-    if (fourSelected = true) {
+    else if (fourSelected === true) {
         saveToLocalStorage();
-        $("#resultsButton").toggle();
+        $("#questionFour").toggle();
+        fourSelected = false;
+        $("#resultsButton").show();
+        $("#continueButton").hide();
 
     }
 
