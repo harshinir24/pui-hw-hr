@@ -5,62 +5,128 @@
 
 
   <head> 
-
+    <link href='https://fonts.googleapis.com/css?family=Libre Caslon Text' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <script src="jquery.js"></script>
   </head>
 
   <body>
 
-    <div>
-        <div> <h1> Question 1: What genre would you like to read? </h1> </div>
+    <div id="questionOne" data="1" onClick="">
+        <div class = "questionHeader"> <h1> Question 1: What genre would you like to read? </h1> </div>
         <div> <p>Select one or multiple options.</p> </div>
-        <div> <p> Fiction </p> </div>
-        <div> <p> Non-fiction </p> </div>
-        <div> <p> Mystery & Thriller </p> </div>
-        <div> <p> Sci-Fi </p> </div>
-        <div> <p> History </p> </div>
-        <div> <p> Romance </p> </div>
-        <div> <p> Fantasy </p> </div>
-        <div> <p> Psychology </p> </div>
-        <div> <p> Business </p> </div>
+        <div class = "option" > <p class = "option"> Fiction </p> </div>
+        <div class = "option"> <p> Non-fiction </p> </div>
+        <div class = "option"> <p> Mystery & Thriller </p> </div>
+        <div class = "option"> <p> Sci-Fi </p> </div>
+        <div class = "option"> <p> History </p> </div>
+        <div class = "option"> <p> Romance </p> </div>
+        <div class = "option"> <p> Fantasy </p> </div>
+        <div class = "option"> <p> Psychology </p> </div>
+        <div class = "option"> <p> Business </p> </div>
 
     </div>
 
-    <div>
-        <div> <h1> Expert Reviews or Community Reviews? </h1> </div>
+    <div id="questionTwo" data="2">
+        <div class = "questionHeader"> <h1> Expert Reviews or Community Reviews? </h1> </div>
         <div> <p>Select one or multiple options.</p> </div>
-        <div> <p> Expert reviews </p> </div>
-        <div> <p> Community reviews </p> </div>
-        <div> <p> Both! </p> </div>
+        <div class = "option"> <p> Expert reviews </p> </div>
+        <div class = "option"> <p> Community reviews </p> </div>
+        <div class = "option"> <p> Both! </p> </div>
     </div>
 
-    <div>
-        <div> <h1> Choose by Sales and Awards. </h1> </div>
+    <div id="questionThree" data="3">
+        <div class = "questionHeader"> <h1> Choose by Sales and Awards. </h1> </div>
         <div> <p>Select one or multiple options.</p> </div>
-        <div> <p> Booker Prize </p> </div>
-        <div> <p> Pulitzer Prize Winner </p> </div>
-        <div> <p> NY Times Bestseller </p> </div>
-        <div> <p>National Book Award</p> </div>
-        <div> <p> John Newberry Award </p> </div>
-        <div> <p> Hugo Award </p> </div>
-        <div> <p> Goodreads Choice Award Winners </p> </div>
-        <div> <p> Best selling E Books </p> </div>
-        <div> <p> Amazon’s Choice </p> </div> <!-- may take out if unable to scrape data -->
+        <div class = "option"> <p> Booker Prize </p> </div>
+        <div class = "option"> <p> Pulitzer Prize Winner </p> </div>
+        <div class = "option"> <p> NY Times Bestseller </p> </div>
+        <div class = "option"> <p>National Book Award</p> </div>
+        <div class = "option"> <p> John Newberry Award </p> </div>
+        <div class = "option"> <p> Hugo Award </p> </div>
+        <div class = "option"> <p> Goodreads Choice Award Winners </p> </div>
+        <div class = "option"> <p> Best selling E Books </p> </div>
+        <div class = "option"> <p> Amazon’s Choice </p> </div> <!-- may take out if unable to scrape data -->
     </div>
 
-    <div>
-        <div> <h1> Age reading range  </h1> </div>
+    <div id="questionFour" data="4">
+        <div class = "questionHeader"> <h1> Age reading range  </h1> </div>
         <div> <p>Select one or multiple options.</p> </div>
-        <div> <p> Adult </p> </div>
-        <div> <p>Young Adult and Teens </p> </div>
-        <div> <p> Ages 8 - 12 </p> </div>
-        <div> <p> Ages 4 - 8 </p> </div>
+        <div class = "option"> <p> Adult </p> </div>
+        <div class = "option"> <p>Young Adult and Teens </p> </div>
+        <div class = "option"> <p> Ages 8 - 12 </p> </div>
+        <div class = "option"> <p> Ages 4 - 8 </p> </div>
     </div>
 
 
+    <button id="continueButton">Continue</button>
 
+    <script>
 
-    <button>Continue</button>
+        let oneSelected = false;
+        let twoSelected = false;
+        let threeSelected = false;
+        let fourSelected = false;
 
+        $( document ).ready(function() {
+            $("#questionTwo").hide();
+            $("#questionThree").hide();
+            $("#questionFour").hide();
+        })
+
+        let visibleAssets = [1, 2, 3 ,4]
+        let preferences = [];
+
+        //function selectOption () {
+            //document.getElementById("option").style.border
+        //}
+
+        $(".option").click(function(){
+            preferences.push($(".option").textContent);
+            console.log($(".option").textContent)
+            //console.log(preferences);
+        })
+
+        $("#questionOne").click(function(){
+            //console.log(preferences);
+            oneSelected = true;
+        })
+
+        $("#questionTwo").click(function(){
+            //console.log(preferences);
+            twoSelected = true;
+        })
+
+        $("#questionThree").click(function(){
+            //console.log(preferences);
+            threeSelected = true;
+        })
+
+        $("#questionFour").click(function(){
+            //console.log(preferences);
+            fourSelected = true;
+        })
+
+        
+        $("#continueButton").click(function(){
+
+            if (oneSelected === true) {
+                $("#questionOne").toggle();
+                $("#questionTwo").toggle();
+                oneSelected = false;
+            } else if (twoSelected === true) {
+                $("#questionTwo").toggle();
+                $("#questionThree").toggle();
+                twoSelected = false;
+            } else if (threeSelected === true) {
+                $("#questionThree").toggle();
+                $("#questionFour").toggle();
+                threeSelected = false;
+            } 
+
+           
+        })
+    </script>
 
   </body>
 </html>

@@ -1,3 +1,13 @@
 body {
     text-align: center;
+    font-family: 'Libre Caslon Text';
+    color: #292929;
+}
+
+p {
+    font-family: 'Helvetica';
+}
+
+.option:onclick {
+    border: #ec8f00;
 }
