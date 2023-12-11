@@ -1,0 +1,203 @@
+/* Documentation: 
+https://stackoverflow.com/questions/34272166/how-to-make-text-display-slower
+*/
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'Libre Caslon Text';
+    color: #292929;
+}
+
+body {
+    text-align: center;
+    font-family: 'Helvetica';
+    color: #292929;
+}
+
+.questionOptions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.optionText{
+    animation:fadeIn .5s;
+    }
+  @keyframes fadeIn{
+    0%{opacity:0;}  
+    80%{opacity:0;}
+    100%{opacity:1;}
+    }
+
+.option {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    width: 450px;
+    height: 75px;
+    border-width: medium;
+    border-radius: 40px;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.option:hover {
+    border-color: #ec8f00;
+}
+
+/* .option-selected {
+    border-color: #ec8f00;
+    border-style: solid;
+    border-width: medium;
+} */
+
+#first-section {
+    height: 400px;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.quiz-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+#second-section {
+    background-color: #420e07;
+    height: 650px;
+    padding-top: 20px;
+    width: 100%;
+    margin-top: 200px;
+}
+
+.second-section-text {
+    color: white;
+    margin-bottom: 50px;
+}
+
+#about-quiz-one-p {
+    width: 250px;
+    overflow: visible;
+    padding: 100px;
+}
+
+#about-quiz-one-head {
+    width: 300px;
+    overflow: visible;
+    padding: 100px;
+}
+
+#about-quiz-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 300px;
+    border: solid white;
+}
+
+
+#home-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 25px;
+    text-decoration: none;
+    color: #292929;
+    font-family: 'Libre Caslon Text';
+
+}
+
+.quiz-button {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: solid;
+    margin-top: 50px;
+    border-radius: 50px;
+    box-shadow: 3px 3px #d3d3d3;
+    background-color: #002907;
+}
+
+#button-style-2 {
+    width: 200px;
+    color: white;
+    font-family: "Helvetica";
+}
+
+.take-quiz {
+    text-decoration: none;
+    color: white; 
+}
+
+#body-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    width: 100%;
+}
+
+.continue-section {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.quiz-body-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+#retake-quiz-button {
+    width: 200px;
+}
+
+#results-section {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 1000px;
+}
+
+#continue-button {
+    width: 200px;
+    color: white;
+    font-family: "Helvetica";
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    border: solid;
+    border-radius: 50px;
+    box-shadow: 3px 3px #d3d3d3;
+    background-color: #002907;
+}
+
+.counter {
+    font-family: 'Libre Caslon Text';
+}

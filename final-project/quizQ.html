@@ -6,78 +6,81 @@
 
   <head> 
     <link href='https://fonts.googleapis.com/css?family=Libre Caslon Text' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="style.css" >
-    <script src="jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS-files/style.css" >
+    <script src="javaScript/jquery.js"></script>
+    <div id="progressbar"></div>
+    <div><a id="home-button" href="index.html"> The Bookworm Quiz</a></div>
+
   </head>
 
   <body>
 
-    
+    <div class="quiz-body-section">
 
-    <div id="questionOne" data="1" onClick="">
-        <div class = "questionHeader"> <h1> What genre would you like to read? </h1> </div>
-        <div> <p>Select one or multiple options.</p> </div>
-        <div class="questionOptions">
-            <div class = "option" > <p class = "optionText"> Fiction </p> </div>
-            <div class = "option"> <p class = "optionText"> Non-fiction </p> </div>
-            <div class = "option"> <p class = "optionText"> Mystery & Thriller </p> </div>
-            <div class = "option"> <p class = "optionText"> Sci-Fi </p> </div>
-            <div class = "option"> <p class = "optionText"> History </p> </div>
-            <div class = "option"> <p class = "optionText"> Romance </p> </div>
-            <div class = "option"> <p class = "optionText"> Fantasy </p> </div>
-            <div class = "option"> <p class = "optionText"> Psychology </p> </div>
-            <div class = "option"> <p class = "optionText"> Business </p> </div>
-            <div class = "option"> <p class = "optionText"> Surprise me </p> </div>
+        <div id="questionOne">
+            <div class = "questionHeader"> 
+                <p class="counter">1/3</p>
+                <h1> What genre would you like to read? </h1> 
+            </div>
+            <div> <p>Select one or multiple options.</p> </div>
+            <div class="questionOptions">
+                <div class = "option" > <p class = "optionText"> Fiction </p> </div>
+                <div class = "option"> <p class = "optionText"> Non-fiction </p> </div>
+                <div class = "option"> <p class = "optionText"> Mystery & Thriller </p> </div>
+                <div class = "option"> <p class = "optionText"> Sci-Fi </p> </div>
+                <div class = "option"> <p class = "optionText"> History </p> </div>
+                <div class = "option"> <p class = "optionText"> Romance </p> </div>
+                <div class = "option"> <p class = "optionText"> Fantasy </p> </div>
+                <div class = "option"> <p class = "optionText"> Psychology </p> </div>
+                <div class = "option"> <p class = "optionText"> Business </p> </div>
+                <div class = "option"> <p class = "optionText"> Surprise me </p> </div>
+            </div>
+
         </div>
+
+        <div id="questionTwo">
+            <div class = "questionHeader"> 
+                <p class="counter">2/3</p>
+                <h1> Choose by Sales and Awards. </h1> 
+            </div>
+            <div> <p>Select one or multiple options.</p> </div>
+            <div class="questionOptions">
+                <div class = "option"> <p class = "optionText"> Booker Prize </p> </div>
+                <div class = "option"> <p class = "optionText"> Pulitzer Prize Winner </p> </div>
+                <div class = "option"> <p class = "optionText"> NY Times Bestseller </p> </div>
+                <div class = "option"> <p class = "optionText"> National Book Award</p> </div>
+                <div class = "option"> <p class = "optionText"> Goodreads Choice Award Winners </p> </div>
+                <div class = "option"> <p class = "optionText"> Best selling E Books </p> </div>
+                <div class = "option"> <p class = "optionText"> Amazon’s Choice </p> </div> 
+                <div class = "option"> <p class = "optionText"> No preference </p> </div>
+            </div>
+        </div>
+
+        <div id="questionThree">
+            <div class = "questionHeader"> 
+                <p class="counter">3/3</p>
+                <h1> Age reading range  </h1> 
+            </div>
+            <div> <p>Select one or multiple options.</p> </div>
+            <div class="questionOptions">
+                <div class = "option"> <p class = "optionText"> Adult </p> </div>
+                <div class = "option"> <p class = "optionText">Young Adult and Teens </p> </div>
+                <div class = "option"> <p class = "optionText"> Ages 8 - 12 </p> </div>
+                <div class = "option"> <p class = "optionText"> Ages 4 - 8 </p> </div>
+            </div>
+        </div>
+
+
+        <!-- Another div with an image to release result? Click on the worm to release a result -->
+        <div class="continue-section">
+            <div id="continue-button" class="button-style-2 quiz-button"><a class="cont-link take-quiz">Continue</a></div>
+        </div>
+        <!--class="quiz-button continue-section button-style-2" class="cont-link take-quiz"-->
 
     </div>
 
-
-    <!-- <div id="questionTwo" data="2">
-        <div class = "questionHeader"> <h1> Expert Reviews or Community Reviews? </h1> </div>
-        <div> <p>Select one or multiple options.</p> </div>
-        <div class="questionOptions">
-            <div class = "option"> <p class = "optionText"> Expert reviews </p> </div>
-            <div class = "option"> <p class = "optionText"> Community reviews </p> </div>
-            <div class = "option"> <p class = "optionText"> Both! </p> </div>
-            <div class = "option"> <p class = "optionText"> No preference </p> </div>
-        </div>
-    </div> -->
-
-    <div id="questionThree" data="3">
-        <div class = "questionHeader"> <h1> Choose by Sales and Awards. </h1> </div>
-        <div> <p>Select one or multiple options.</p> </div>
-        <div class="questionOptions">
-            <div class = "option"> <p class = "optionText"> Booker Prize </p> </div>
-            <div class = "option"> <p class = "optionText"> Pulitzer Prize Winner </p> </div>
-            <div class = "option"> <p class = "optionText"> NY Times Bestseller </p> </div>
-            <div class = "option"> <p class = "optionText"> National Book Award</p> </div>
-            <div class = "option"> <p class = "optionText"> Goodreads Choice Award Winners </p> </div>
-            <div class = "option"> <p class = "optionText"> Best selling E Books </p> </div>
-            <div class = "option"> <p class = "optionText"> Amazon’s Choice </p> </div> <!-- may take out if unable to scrape data -->
-            <div class = "option"> <p class = "optionText"> No preference </p> </div>
-        </div>
-    </div>
-
-    <div id="questionFour" data="4">
-        <div class = "questionHeader"> <h1> Age reading range  </h1> </div>
-        <div> <p>Select one or multiple options.</p> </div>
-        <div class="questionOptions">
-            <div class = "option"> <p class = "optionText"> Adult </p> </div>
-            <div class = "option"> <p class = "optionText">Young Adult and Teens </p> </div>
-            <div class = "option"> <p class = "optionText"> Ages 8 - 12 </p> </div>
-            <div class = "option"> <p class = "optionText"> Ages 4 - 8 </p> </div>
-        </div>
-    </div>
-
-    <div>
-        <a href="results.html"><button id="resultsButton">Click to see your results!</button></a>
-    </div>
-
-    <!-- Another div with an image to release result? Click on the worm to release a result -->
-    <button id="continueButton">Continue</button>
-
-    <script src="quiz.js"></script>
+    <script src="javaScript/jquery.js"></script>
+    <script src="javaScript/quiz.js"></script>
 
   </body>
 </html>

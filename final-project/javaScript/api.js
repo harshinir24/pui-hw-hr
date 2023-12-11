@@ -19,7 +19,7 @@ let preferencesArray;
     function OpenaiFetchAPI() {
     console.log("Calling GPT3")
     var url = "https://api.openai.com/v1/chat/completions";
-    var bearer = 'Bearer ' + OPENAI_API_KEY
+    var bearer = 'Bearer ' + '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'
     fetch(url, {
         method: 'POST',
         headers: {

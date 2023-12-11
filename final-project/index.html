@@ -6,22 +6,38 @@
 
   <head> 
     <link href='https://fonts.googleapis.com/css?family=Libre Caslon Text' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="style.css" >
+    <link rel="stylesheet" type="text/css" href="CSS-files/style.css" >
+    <div><a id="home-button" href="index.html"> The Bookworm Quiz</a></div>
   </head>
 
   <body>
-    <div><h1> Welcome to the Bookworm Quiz</h1></div>
-    <div><p>Find your new favorite book with our interactive quiz!</p></div>
+    <div id="body-section">
+        <div id="first-section">
+            <div><h1> Welcome to the Bookworm Quiz</h1></div>
+            <div id="quiz-section">
+                <div><p>Find your new favorite book with our interactive quiz!</p></div>
+                <div class="quiz-button"><a href="quizQ.html" class="take-quiz">Take the quiz</a></div>
+            </div>
 
-    <a href="quizQ.html"><button>Take the quiz</button></a>
+        </div>  
 
-    <h2>About the Bookworm quiz</h2>
+        <div id="second-section">
+            <h2 class="second-section-text">About the Bookworm quiz</h2>
 
-    <h3>How do we generate your results?</h3>
-    <p>You choose! We let you decide how you want to filter them -- 
-        from expert book reviewers, popularity amongst readers (Goodreads), 
-        sales, awards(e.g., Pulitzer prize), and genre.</p>
+            <div id = "about-quiz-one">
+                <div id="about-quiz-one-head">
+                    <h3 class="second-section-text">How do we generate your results?</h3>
+                </div>
+                <div id="about-quiz-one-p">
+                    <p class="second-section-text">You choose! We let you decide how you want to filter them -- 
+                    from popularity amongst readers (Goodreads), 
+                    sales, awards(e.g., Pulitzer prize), age, and genre. Then we use ChatGPT to generate 
+                    recommendations based on your selections.</p>
+                </div>
+            </div>
 
+        </div>
+    </div>
 
   </body>
 </html>

@@ -3,28 +3,30 @@
 
 //TOGGLING VISIBILITY OF QUIZ QUESTIONS
 let oneSelected = false;
-//let twoSelected = false;
+let twoSelected = false;
 let threeSelected = false;
-let fourSelected = false;
+
+let divContent = [];
 
 $( document ).ready(function() {
-    //$("#questionTwo").hide();
+    $("#questionOne").hide();
+    $("#questionOne").fadeIn("slow");
+    $("#questionTwo").hide();
     $("#questionThree").hide();
-    $("#questionFour").hide();
-    $("#resultsButton").hide();
 })
 
-let visibleAssets = [1, 2, 3 ,4]
+
 let preferences = [];
 
 //When options are selected, they are added to the preferences array 
-$(".optionText").click(function(){
+$(".option").click(function(){
     if (preferences.includes(this.textContent)) {
-        return;
+        this.style.border = "solid medium #292929"
+        preferences.pop(this.textContent);
     } else {
         console.log(this);
         preferences.push(this.textContent);
-        this.style.border = "#ec8f00";
+        this.style.border = "solid medium #ec8f00 ";
     } 
     
     console.log(preferences);
@@ -32,54 +34,44 @@ $(".optionText").click(function(){
 })
 
 $("#questionOne").click(function(){
-    
     oneSelected = true;
 })
 
-// $("#questionTwo").click(function(){
-//     //console.log(preferences);
-//     twoSelected = true;
-// })
+$("#questionTwo").click(function(){
+     twoSelected = true;
+ })
 
 $("#questionThree").click(function(){
     threeSelected = true;
-})
-
-$("#questionFour").click(function(){
-    fourSelected = true;
+    $(".cont-link").attr("href", "results.html")
 })
 
 
-$("#continueButton").click(function(){
+
+$("#continue-button").on("click", function(){
 
     if (oneSelected === true) {
         $("#questionOne").toggle();
-    //     $("#questionTwo").toggle();
-    //     oneSelected = false;
-    // } else if (twoSelected === true) {
-    //     $("#questionTwo").toggle();
-        $("#questionThree").toggle();
+        $("#questionTwo").fadeIn("slow");
         oneSelected = false;
-        threeSelected = false;
-        fourSelected = false;
+        twoSelected = true;
+     } else if (twoSelected === true) {
+        $("#questionTwo").toggle();
+        $("#questionThree").fadeIn("slow");
+        oneSelected = false;
+        twoSelected = false;
+        threeSelected = true;
     } 
     else if (threeSelected === true) {
-        $("#questionThree").toggle();
-        $("#questionFour").toggle();
+        saveToLocalStorage();
+        $("#questionThree").hide();
         threeSelected = false;
-        fourSelected = false;
+        $("#continue-button").hide();
     } 
 
-    else if (fourSelected === true) {
-        saveToLocalStorage();
-        $("#questionFour").toggle();
-        fourSelected = false;
-        $("#resultsButton").show();
-        $("#continueButton").hide();
-
-    }
-
 })
+
+
 
 
 

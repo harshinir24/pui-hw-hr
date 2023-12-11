@@ -5,16 +5,30 @@
 
 
   <head> 
-
+    <link rel="stylesheet" type="text/css" href="CSS-files/style.css" >
+    <div><a id="home-button" href="index.html"> The Bookworm Quiz</a></div>
   </head>
 
   <body>
     <h1> Here are your results!</h1>
 
+    <div id="results-section">
+
+        <div id="results-list">
+            <p id="results">Generating Results...</p>
+        </div>
+
+        <div class="quiz-button button-style-2" id="retake-quiz-button">
+            <a class="take-quiz" href="index.html">Retake the Quiz!</a>
+        </div>
+
+    </div>
+
     
 
   </body>
-  <script src="dist/bundle.js"></script> 
-  <script src="jquery.js"></script>
-  <script type="module" src="api.js"></script>
+  
+  <script src="javaScript/jquery.js"></script>
+  <script src="javaScript/api.js"></script>
+  
 </html>
