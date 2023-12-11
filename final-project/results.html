@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="UTF-8">
-  <title>Page Title</title>
+  <meta name="viewport" content="width=375px, initial-scale=1.0">
+  <title>The Bookworm Quiz</title>
 
 
   <head> 
@@ -10,18 +11,26 @@
   </head>
 
   <body>
-    <h1> Here are your results!</h1>
 
-    <div id="results-section">
+    <div id="api-input">
+        <h1> Input your Secret OpenAI API Key! </h1>
+        <input id="user-api-key">
+        <div id="book-rec-button" class="button-style-2 quiz-button"><a class="cont-link take-quiz" id="get-books-button">Get Book Recommendations</a></div>
+    </div>
+    
+    <div id="results-container">
 
-        <div id="results-list">
-            <p id="results">Generating Results...</p>
+        <div id="results-section">
+
+            <div id="results-list">
+                
+            </div>
+
+            <div class="quiz-button button-style-2" id="retake-quiz-button">
+                <a class="take-quiz" href="index.html">Retake the Quiz!</a>
+            </div>
+
         </div>
-
-        <div class="quiz-button button-style-2" id="retake-quiz-button">
-            <a class="take-quiz" href="index.html">Retake the Quiz!</a>
-        </div>
-
     </div>
 
     
@@ -29,6 +38,6 @@
   </body>
   
   <script src="javaScript/jquery.js"></script>
-  <script src="javaScript/api.js"></script>
+  <script src="javaScript/api.js" defer></script>
   
 </html>

@@ -15,11 +15,13 @@ let preferencesArray;
      console.log(preferencesArray.join(', '));
  } 
 
+ let api_key = document.querySelector("#user_api_key").value;
 
+ //Initiate API Request
     function OpenaiFetchAPI() {
     console.log("Calling GPT3")
     var url = "https://api.openai.com/v1/chat/completions";
-    var bearer = 'Bearer ' + OPENAI_API_KEY
+    var bearer = 'Bearer ' + api_key
     fetch(url, {
         method: 'POST',
         headers: {
@@ -59,11 +61,15 @@ let preferencesArray;
 
 }
 
-
+    //Add book recommendations from Chat GPT to the body of the page
     function displayBookRecommendations (books) {
         let bookArray = Array.from(books);
         let bookString = bookArray.join("");
         let bookDisplayList = Array.from(bookString.split("\n"));
+
+        let newHead = document.createElement("h1");
+        newHead.innerText = "Your Book recommendations"
+        document.querySelector("#results-section").appendChild(newHead);
         
         for (let i = 0; i < bookDisplayList.length; i++) {
             let newDiv = document.createElement("div");
@@ -83,9 +89,11 @@ let preferencesArray;
 
  $(document).ready(function(){
     $("#retake-quiz-button").hide();
-    OpenaiFetchAPI()
 
  });
+
+ //After user inputs the API key, initiate call to Chat GPT 
+ $("#get-books-button").on("click", OpenaiFetchAPI());
 
 
 
